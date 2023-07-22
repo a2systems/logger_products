@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="product_template_logging_form" model="ir.ui.view">
+	<field name="name">product.template.logging.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"></field>
+        <field name="arch" type="xml">
+		<xpath expr="//notebook" position="inside">
+			<page string="Logging">
+				<br />
+				<group>
+					<field name="logging_ids" readonly="1">
+						<tree>
+							<field name="field_name" />
+							<field name="old_val" />
+							<field name="new_val" />
+							<field name="create_date" />
+							<field name="create_uid" />
+						</tree>
+					</field>
+				</group>
+			</page>
+                </xpath>
+        </field>
+    </record>
+
+
+</odoo>
